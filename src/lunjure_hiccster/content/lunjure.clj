@@ -11,8 +11,8 @@
       [:div.inner-box 
        [:div 
         [:section#chat_window 
-         [:div#output_window
+         [:div#text_window
           (when dummy?
-            [:p "Moritz: >created team REWE"])]
-         [:div#input_window
-          [:p {:contenteditable "true" :id "message" :name "message"}]]]]])))
+            [:p "Moritz: >created team REWE"])
+          [:section.input-field
+           [:p {:contenteditable "true" :id "message" :name "message"}]]]]]])))
