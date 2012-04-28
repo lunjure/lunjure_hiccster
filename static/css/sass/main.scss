@@ -41,7 +41,12 @@ body {
  width: 100%;
  height: 100%;
  min-height: 100%;
- min-width: 1100px
+ min-width: 1100px;
+ &.chatroom {
+  background: {
+    color: rgba(213,214,198,1);
+  }
+ }
 }
 #main_wrapper {
  width: 100%;
@@ -137,22 +142,36 @@ header {
   top: 100px;
   padding: 0 0 50px 0;
   #output_window {
+    box: {
+      shadow: 0 0 200px rgba(0,0,0,0.9) inset;
+    }
     font: {
       size: 18px;
       family: CPMono;
     }
     color: rgba(47,167,1,1);
-    padding: 20px;
+    padding: 40px;
     position: relative;
     height: 500px;
-    width: 600px;
+    width: 540px;
     background: {
       color: rgba(31,36,28,1);
     }
     border: {
-      radius: 20px;
+      radius: 60px;
     }
+    *::selection {
+      background: {
+        color: rgba(47,167,1,1);
+        }  
+      color: rgba(31,36,28,1);
+    }
+
     &:after {
+      box: {
+        shadow: 0 -70px 70px -50px rgba(0,0,0,0.2) inset,
+                0 70px 70px -50px rgba(235,255,155,0.2) inset;
+      }
       pointer-events: none;
       content: '';
       width: 100%;
@@ -161,7 +180,7 @@ header {
       top: 0;
       left: 0;
       border: {
-        radius: 20px;
+        radius: 60px;
       }
       background: {
         image: -webkit-linear-gradient(90deg, 
@@ -176,6 +195,7 @@ header {
     }
   }
   #input_window {
+    padding: 20px;
     margin: 50px 0 0 0;
     height: 100px;
     width: 600px;
