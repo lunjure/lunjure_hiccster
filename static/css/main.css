@@ -1,5 +1,5 @@
 @font-face {
-  font-family: '!PaulMaulRegular';
+  font-family: 'paul';
   src: url("/fonts/paulmaul/!PaulMaul-webfont.eot");
   src: url("/fonts/paulmaul/!PaulMaul-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/paulmaul/!PaulMaul-webfont.woff") format("woff"), url("/fonts/paulmaul/!PaulMaul-webfont.ttf") format("truetype"), url("/fonts/paulmaul/!PaulMaul-webfont.svg#!PaulMaulRegular") format("svg");
   font-weight: normal;
@@ -96,21 +96,24 @@ header#main_header {
     color: #2fa701;
     padding: 20px;
     position: relative;
-    height: 70%;
+    height: 80%;
     width: 500px;
     background-color: #1f241c;
     border-radius: 10px; }
-    #chat_window #text_window > p {
-      line-height: 20px; }
-      #chat_window #text_window > p[data-usercolor="red"]:before {
-        color: #a7011c; }
-      #chat_window #text_window > p[data-usercolor="orange"]:before {
-        color: #a75701; }
-      #chat_window #text_window > p[data-usercolor="yellow"]:before {
-        color: #9da701; }
-      #chat_window #text_window > p:before {
-        content: attr(data-username) ": ";
-        text-transform: capitalize; }
+    #chat_window #text_window > .output {
+      height: 80%;
+      overflow-x: auto; }
+      #chat_window #text_window > .output > p {
+        line-height: 20px; }
+        #chat_window #text_window > .output > p[data-usercolor="red"]:before {
+          color: #a7011c; }
+        #chat_window #text_window > .output > p[data-usercolor="orange"]:before {
+          color: #a75701; }
+        #chat_window #text_window > .output > p[data-usercolor="yellow"]:before {
+          color: #9da701; }
+        #chat_window #text_window > .output > p:before {
+          content: attr(data-username) ": ";
+          text-transform: capitalize; }
     #chat_window #text_window:after {
       box-shadow: 0 -70px 70px -50px rgba(0, 0, 0, 0.2) inset, 0 70px 70px -50px rgba(235, 255, 155, 0.2) inset;
       pointer-events: none;
@@ -134,12 +137,12 @@ header#main_header {
       width: 460px;
       border-top: 2px dashed #2fa701; }
       #chat_window #text_window .input-field #message {
-        width: 100%;
+        position: relative;
+        width: 460px;
         -webkit-appearance: none;
         background: none;
         height: 20px;
         line-height: 20px;
-        overflow: hidden;
         color: #2fa701;
         font-size: 18px;
         font-family: CPMono;
@@ -148,9 +151,13 @@ header#main_header {
           outline: 0; }
         #chat_window #text_window .input-field #message:before {
           content: ">";
+          height: 20px;
+          line-height: 20px;
+          width: 10px;
+          text-align: right;
           position: absolute;
-          left: 0;
-          top: 20px; }
+          left: -20px;
+          top: 0; }
 
 span.emoticon {
   display: inline-block;
@@ -206,3 +213,108 @@ span.emoticon {
     background-image: url("/images/emoticons/rain.png"); }
   span.emoticon[data-emoticon="sun"] {
     background-image: url("/images/emoticons/sun.png"); }
+
+ul.ui-autocomplete {
+  background-color: #1f241c;
+  border-radius: 10px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #bfc1a8;
+  font-size: 18px;
+  font-family: CPMono;
+  color: #2fa701;
+  padding: 10px;
+  position: absolute;
+  z-index: 99; }
+  ul.ui-autocomplete li {
+    list-style-type: none; }
+    ul.ui-autocomplete li:first-child {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px; }
+    ul.ui-autocomplete li:last-child {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px; }
+    ul.ui-autocomplete li a {
+      display: block;
+      width: 100%;
+      -webkit-user-select: none;
+      cursor: pointer; }
+      ul.ui-autocomplete li a:focus {
+        outline: none; }
+  ul.ui-autocomplete:after {
+    pointer-events: none;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background-image: -webkit-linear-gradient(90deg, rgba(41, 36, 41, 0.5), rgba(41, 36, 41, 0.5) 30%, rgba(41, 36, 41, 0) 30%, rgba(41, 36, 41, 0) 100%);
+    background-repeat: repeat;
+    background-size: 3px 3px; }
+
+#text_pad {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding: 20px;
+  font-size: 18px;
+  font-family: paul;
+  color: #1b4395;
+  line-height: 22px;
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  width: 400px;
+  height: 400px;
+  background-image: -webkit-linear-gradient(90deg, #b7d7be, #b7d7be 30%, #e5e6a9 30%, #e5e6a9 100%);
+  background-repeat: repeat;
+  background-size: 22px 22px; }
+  #text_pad ul.team {
+    position: relative;
+    z-index: 5; }
+    #text_pad ul.team li.team-name {
+      list-style-type: none; }
+      #text_pad ul.team li.team-name ul.users {
+        margin: 0 0 0 20px; }
+        #text_pad ul.team li.team-name ul.users li.user {
+          display: inline-block; }
+          #text_pad ul.team li.team-name ul.users li.user:not(:last-child):after {
+            content: ",";
+            padding: 0 5px 0 0; }
+  #text_pad:before {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    position: absolute;
+    z-index: 0;
+    top: -2px;
+    left: -2px;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-linear-gradient(90deg, #b7d7be, #b7d7be 30%, #e5e6a9 30%, #e5e6a9 100%);
+    background-repeat: repeat;
+    background-size: 22px 22px;
+    content: ''; }
+  #text_pad:after {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    position: absolute;
+    z-index: 0;
+    top: -4px;
+    left: -4px;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-linear-gradient(90deg, #b7d7be, #b7d7be 30%, #e5e6a9 30%, #e5e6a9 100%);
+    background-repeat: repeat;
+    background-size: 22px 22px;
+    content: ''; }
+  #text_pad > div:after {
+    box-shadow: 4px 0 0 #555555, 0 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: #aaa;
+    content: '';
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    padding: 2px;
+    height: 30px;
+    top: -15px;
+    left: -6px; }

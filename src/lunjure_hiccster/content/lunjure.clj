@@ -10,8 +10,17 @@
        :classes ["body chatroom"]}
       [:div.inner-box 
        [:div 
+        [:div#text_pad 
+         [:div.wrapper
+         (when dummy?
+          [:ul.team
+           [:li.team-name "Havanna"
+           [:ul.users 
+            [:li.user "Daniel"]
+            [:li.user "Moritz"]]]])]]
         [:section#chat_window 
          [:div#text_window
+          [:div.output
           (when dummy?
            (list
             [:p {:data-username "moritz" :data-usercolor "red"} 
@@ -27,6 +36,8 @@
             [:span.emoticon {:data-emoticon "coffee"}]
             [:span.emoticon {:data-emoticon "sun"}]
              " me too"]
-            [:p {:data-username "daniel" :data-usercolor "yellow"} "created team Havanna "]))
+            [:p {:data-username "daniel" :data-usercolor "yellow"} "created team Havanna "]))]
           [:section.input-field
-           [:input {:type "text" :id "message" :name "message"}]]]]]])))
+           [:div {:contenteditable "true" :id "message" :name "message"}]]]
+
+           ]]])))
