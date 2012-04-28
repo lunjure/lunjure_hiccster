@@ -24,8 +24,6 @@
       "<![endif]-->"]
      [:body {:class (classes->string classes) }
       [:div#main_wrapper
-       [:header#main_header 
-        [:h1 title]]
        [:div#content.content-wrapper
         content]
       [:footer#bottom_navigation
