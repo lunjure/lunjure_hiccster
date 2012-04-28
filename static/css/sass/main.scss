@@ -39,12 +39,19 @@ $base-path-font: '/fonts/';
 html,
 body {
  width: 100%;
-
+ height: 100%;
+ min-height: 100%;
+ min-width: 1100px
 }
 #main_wrapper {
  width: 100%;
+ height: 100%;
+ position: relative;
 }
+.content-inner {
+  width: 100%;
 
+}
 header {
  &#main_header {
   position: absolute; 
@@ -71,7 +78,7 @@ header {
  position: absolute; 
  left: 50%; 
  top: 50%;
- height: 100px;
+ height: 300px;
  line-height: 100px;
  width: 300px;
  margin: 50px 0 0 -150px;
@@ -115,12 +122,78 @@ header {
      }
    }
    &:active {
-   margin: 24px auto;
-   box: {
-    shadow: 0 0 19px rgba(255,255,255,0.6) inset,
-            0 1px 0 rgba(100,100,100,1);
-   }
-
+     margin: 24px auto;
+     box: {
+      shadow: 0 0 19px rgba(255,255,255,0.6) inset,
+              0 1px 0 rgba(100,100,100,1);
+     }
    } 
   }
 }
+
+#chat_window {
+  position: absolute;
+  right: 50px;
+  top: 100px;
+  padding: 0 0 50px 0;
+  #output_window {
+    font: {
+      size: 18px;
+      family: CPMono;
+    }
+    color: rgba(47,167,1,1);
+    padding: 20px;
+    position: relative;
+    height: 500px;
+    width: 600px;
+    background: {
+      color: rgba(31,36,28,1);
+    }
+    border: {
+      radius: 20px;
+    }
+    &:after {
+      pointer-events: none;
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: {
+        radius: 20px;
+      }
+      background: {
+        image: -webkit-linear-gradient(90deg, 
+                                       rgba(41,36,41,0.5),
+                                       rgba(41,36,41,0.5) 30%,
+                                       rgba(41,36,41,0) 30%,
+                                       rgba(41,36,41,0)100%);
+        repeat: repeat;
+        size: 3px 3px;
+      }
+
+    }
+  }
+  #input_window {
+    margin: 50px 0 0 0;
+    height: 100px;
+    width: 600px;
+    background: {
+      color: rgba(31,36,28,1);
+    }
+    border: {
+      radius: 20px;
+    }
+
+  }
+}
+
+
+
+
+
+
+
+
+
