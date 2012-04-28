@@ -19,9 +19,9 @@
       [:meta {:charset "utf-8"}]
       [:link {:href (path "images/favicon.ico") :rel "shortcut icon" :type "image/x-icon"}]
       [:link {:href (path "css/main.css") :rel "stylesheet" :type "text/css"}]
-      [:script {:src "https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"}]
-      [:script {:src "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"}]
       [:script {:src "js/greg.js"}]]
+      [:script {:src "/jquery-1.7.2.min.js"}]
+      [:script {:src "/jquery-ui-1.8.19.custom.min.js"}]]
      [:body {:class (classes->string classes) }
       [:div#main_wrapper
        [:div#content.content-wrapper
