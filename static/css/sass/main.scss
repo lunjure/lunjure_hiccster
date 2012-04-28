@@ -252,13 +252,17 @@ header {
 span {
   &.emoticon {
     display:inline-block;
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    position:relative;
+    top:3px;
+    height: 17px;
+    padding: 0 4px;
     overflow: hidden;
     text-indent: 17px;
     background: {
       size: 17px 17px;
       position: 50% 50%;
+      repeat: no-repeat;
     }
     &[data-emoticon="lol"] {
      background: {

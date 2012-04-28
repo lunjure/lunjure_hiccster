@@ -154,12 +154,16 @@ header#main_header {
 
 span.emoticon {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  position: relative;
+  top: 3px;
+  height: 17px;
+  padding: 0 4px;
   overflow: hidden;
   text-indent: 17px;
   background-size: 17px 17px;
-  background-position: 50% 50%; }
+  background-position: 50% 50%;
+  background-repeat: no-repeat; }
   span.emoticon[data-emoticon="lol"] {
     background-image: url("/images/emoticons/bigSmile.png"); }
   span.emoticon[data-emoticon="wtf"] {
