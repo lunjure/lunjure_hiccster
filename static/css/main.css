@@ -83,7 +83,7 @@ header#main_header {
 #chat_window {
   position: absolute;
   right: 50px;
-  top: 100px;
+  top: 50px;
   padding: 0 0 50px 0; }
   #chat_window #output_window {
     box-shadow: 0 0 200px rgba(0, 0, 0, 0.9) inset;
@@ -92,10 +92,10 @@ header#main_header {
     color: #2fa701;
     padding: 40px;
     position: relative;
-    height: 500px;
+    height: 300px;
     width: 540px;
     background-color: #1f241c;
-    border-radius: 60px; }
+    border-radius: 30px; }
     #chat_window #output_window *::selection {
       background-color: #2fa701;
       color: #1f241c; }
@@ -108,7 +108,7 @@ header#main_header {
       position: absolute;
       top: 0;
       left: 0;
-      border-radius: 60px;
+      border-radius: 30px;
       background-image: -webkit-linear-gradient(90deg, rgba(41, 36, 41, 0.5), rgba(41, 36, 41, 0.5) 30%, rgba(41, 36, 41, 0) 30%, rgba(41, 36, 41, 0) 100%);
       background-repeat: repeat;
       background-size: 3px 3px; }
