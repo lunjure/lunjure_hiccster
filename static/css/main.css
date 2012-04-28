@@ -51,7 +51,7 @@ header#main_header {
   box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5) inset;
   font-size: 10px;
   font-family: CPMono;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   padding: 10px;
@@ -163,14 +163,14 @@ header#main_header {
       position: absolute;
       bottom: -20px;
       left: 0;
-      margin: 0 20px;
-      padding: 20px;
+      padding: 10px 0;
       height: 50px;
-      width: 80%;
+      width: 100%;
       border-top: 2px dashed #2fa701; }
       #chat_window #text_window .input-field #message {
         position: relative;
-        width: 460px;
+        margin: 0 0 0 40px;
+        width: 90%;
         -webkit-appearance: none;
         background: none;
         height: 28px;
@@ -190,61 +190,6 @@ header#main_header {
           position: absolute;
           left: -20px;
           top: 0; }
-
-span.emoticon {
-  display: inline-block;
-  width: 17px;
-  position: relative;
-  top: 3px;
-  height: 17px;
-  padding: 0 2px;
-  overflow: hidden;
-  text-indent: 17px;
-  background-size: 17px 17px;
-  background-position: 50% 50%;
-  background-repeat: no-repeat; }
-  span.emoticon[data-emoticon="lol"] {
-    background-image: url("/images/emoticons/bigSmile.png"); }
-  span.emoticon[data-emoticon="blink"] {
-    background-image: url("/images/emoticons/blink.png"); }
-  span.emoticon[data-emoticon="smile"] {
-    background-image: url("/images/emoticons/smile.png"); }
-  span.emoticon[data-emoticon="bigblink"] {
-    background-image: url("/images/emoticons/bigBlink.png"); }
-  span.emoticon[data-emoticon="blinktongue"] {
-    background-image: url("/images/emoticons/blinkTongue.png"); }
-  span.emoticon[data-emoticon="tongue"] {
-    background-image: url("/images/emoticons/tongue.png"); }
-  span.emoticon[data-emoticon="sleep"] {
-    background-image: url("/images/emoticons/zzz.png"); }
-  span.emoticon[data-emoticon="wtf"] {
-    background-image: url("/images/emoticons/whatTheFuck.png"); }
-  span.emoticon[data-emoticon="hehe"] {
-    background-image: url("/images/emoticons/hehe.png"); }
-  span.emoticon[data-emoticon="sad"] {
-    background-image: url("/images/emoticons/sad.png"); }
-  span.emoticon[data-emoticon="cry"] {
-    background-image: url("/images/emoticons/cry.png"); }
-  span.emoticon[data-emoticon="nosay"] {
-    background-image: url("/images/emoticons/IdontGiveAFuck.png"); }
-  span.emoticon[data-emoticon="oo"] {
-    background-image: url("/images/emoticons/O.png"); }
-  span.emoticon[data-emoticon="heart"] {
-    background-image: url("/images/emoticons/love.png"); }
-  span.emoticon[data-emoticon="minus1"] {
-    background-image: url("/images/emoticons/minusOne.png"); }
-  span.emoticon[data-emoticon="plus1"] {
-    background-image: url("/images/emoticons/plusOne.png"); }
-  span.emoticon[data-emoticon="burger"] {
-    background-image: url("/images/emoticons/burger.png"); }
-  span.emoticon[data-emoticon="coffee"] {
-    background-image: url("/images/emoticons/coffee.png"); }
-  span.emoticon[data-emoticon="ice"] {
-    background-image: url("/images/emoticons/ice.png"); }
-  span.emoticon[data-emoticon="rain"] {
-    background-image: url("/images/emoticons/rain.png"); }
-  span.emoticon[data-emoticon="sun"] {
-    background-image: url("/images/emoticons/sun.png"); }
 
 ul.ui-autocomplete {
   background-color: #1f241c;
@@ -367,3 +312,58 @@ ul.ui-autocomplete {
     background: #555; }
   #text_pad *::selection {
     background-color: rgba(222, 167, 227, 0.8); }
+
+span.emoticon {
+  display: inline-block;
+  width: 17px;
+  position: relative;
+  top: 3px;
+  height: 17px;
+  padding: 0 2px;
+  overflow: hidden;
+  text-indent: 17px;
+  background-size: 17px 17px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat; }
+  span.emoticon[data-emoticon="lol"] {
+    background-image: url("/images/emoticons/bigSmile.png"); }
+  span.emoticon[data-emoticon="blink"] {
+    background-image: url("/images/emoticons/blink.png"); }
+  span.emoticon[data-emoticon="smile"] {
+    background-image: url("/images/emoticons/smile.png"); }
+  span.emoticon[data-emoticon="bigblink"] {
+    background-image: url("/images/emoticons/bigBlink.png"); }
+  span.emoticon[data-emoticon="blinktongue"] {
+    background-image: url("/images/emoticons/blinkTongue.png"); }
+  span.emoticon[data-emoticon="tongue"] {
+    background-image: url("/images/emoticons/tongue.png"); }
+  span.emoticon[data-emoticon="sleep"] {
+    background-image: url("/images/emoticons/zzz.png"); }
+  span.emoticon[data-emoticon="wtf"] {
+    background-image: url("/images/emoticons/whatTheFuck.png"); }
+  span.emoticon[data-emoticon="hehe"] {
+    background-image: url("/images/emoticons/hehe.png"); }
+  span.emoticon[data-emoticon="sad"] {
+    background-image: url("/images/emoticons/sad.png"); }
+  span.emoticon[data-emoticon="cry"] {
+    background-image: url("/images/emoticons/cry.png"); }
+  span.emoticon[data-emoticon="nosay"] {
+    background-image: url("/images/emoticons/IdontGiveAFuck.png"); }
+  span.emoticon[data-emoticon="oo"] {
+    background-image: url("/images/emoticons/O.png"); }
+  span.emoticon[data-emoticon="heart"] {
+    background-image: url("/images/emoticons/love.png"); }
+  span.emoticon[data-emoticon="minus1"] {
+    background-image: url("/images/emoticons/minusOne.png"); }
+  span.emoticon[data-emoticon="plus1"] {
+    background-image: url("/images/emoticons/plusOne.png"); }
+  span.emoticon[data-emoticon="burger"] {
+    background-image: url("/images/emoticons/burger.png"); }
+  span.emoticon[data-emoticon="coffee"] {
+    background-image: url("/images/emoticons/coffee.png"); }
+  span.emoticon[data-emoticon="ice"] {
+    background-image: url("/images/emoticons/ice.png"); }
+  span.emoticon[data-emoticon="rain"] {
+    background-image: url("/images/emoticons/rain.png"); }
+  span.emoticon[data-emoticon="sun"] {
+    background-image: url("/images/emoticons/sun.png"); }
