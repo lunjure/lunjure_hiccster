@@ -2,14 +2,16 @@
   (:use lunjure_hiccster.core
         lunjure_hiccster.content.layout))
 
-(defn page []
-  (let [title "(lunjure)"]
-    (layout
-     {:title title
-      :classes ["body"]}
-     [:div.inner-box 
-      [:div 
-       [:section#chat_window 
-        [:div#output_window 
-         [:p "Moritz: >created team REWE"]]
-        [:div#input_window ""]]]])))
+(defn page
+  ([] (page true))
+  ([dummy?]
+     (layout
+      {:title "(lunjure)"
+       :classes ["body"]}
+      [:div.inner-box 
+       [:div 
+        [:section#chat_window 
+         [:div#output_window
+          (when dummy?
+            [:p "Moritz: >created team REWE"])]
+         [:div#input_window ""]]]])))
