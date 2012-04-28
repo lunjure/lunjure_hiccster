@@ -5,10 +5,14 @@
 (defn page
   ([] (page true))
   ([dummy?]
+  (let [title "(lunjure)"]
      (layout
-      {:title "(lunjure)"
+      {:title title
        :dummy? dummy?
        :classes ["body chatroom"]}
+      [:header#chat_title 
+       [:h1 title]
+        [:div#roomname "the lunjure crew"]] 
       [:div.inner-box 
        [:div 
         [:div#text_pad 
@@ -16,12 +20,20 @@
          (when dummy?
           (list
           [:ul.team
-           [:li.team-name "Havanna"
+           [:li.team-name 
+            [:span "Undecided"]
            [:ul.users 
             [:li.user "Daniel"]
             [:li.user "Moritz"]]]]
           [:ul.team
-           [:li.team-name "REWE"
+           [:li.team-name 
+           [:span "Havanna"]
+           [:ul.users 
+            [:li.user "Max"]
+            [:li.user "Steffen"]]]]
+          [:ul.team
+           [:li.team-name 
+           [:span "REWE"]
            [:ul.users 
             [:li.user "Gregor"]
             [:li.user "Guido"]
@@ -35,7 +47,7 @@
             [:p {:data-username "moritz" :data-usercolor "red" :data-time "04:20"} 
              "I'm really hungry "
             [:span.emoticon {:data-emoticon "lol"}]]
-            [:p {:data-username "Guido" :data-usercolor "yellow" :data-time "04:20"} 
+            [:p {:data-username "guido" :data-usercolor "yellow" :data-time "04:20"} 
              "does every name have to be 6 characters long? "
             [:span.emoticon {:type "blink"}]]
             [:p {:data-username "gregor" :data-usercolor "orange" :data-time "04:21"} 
@@ -48,9 +60,13 @@
             [:span.emoticon {:data-emoticon "coffee"}]
             [:span.emoticon {:data-emoticon "sun"}]
              " and we can also use multiple emoticons"]
-            [:p.status "daniel created team Havanna "]
-            [:p.status "moritz joined team Havanna "]))]
+            [:p.status {:data-time "04:22"} "daniel created team Havanna "]
+            [:p.status {:data-time "04:22"} "moritz joined team Havanna "]
+            [:p {:data-username "moritz" :data-usercolor "red" :data-time "04:23"} 
+             "stop spamming... let's go "
+            [:span.emoticon {:data-emoticon "sad"}]]
+            [:p.status {:data-time "04:24"} "gregor created team REWE"]
+            [:p.status {:data-time "04:24"} "gerrit joined team REWE"]
+            [:p.status {:data-time "04:25"} "guido joined team REWE"]))]
           [:section.input-field
-           [:input {:type "text" :id "message" :name "message"}]]]
-
-           ]]])))
+           [:input {:type "text" :id "message" :name "message"}]]]]]]))))
