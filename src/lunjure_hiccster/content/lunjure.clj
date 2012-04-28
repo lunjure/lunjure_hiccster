@@ -14,4 +14,5 @@
          [:div#output_window
           (when dummy?
             [:p "Moritz: >created team REWE"])]
-         [:div#input_window ""]]]])))
+         [:div#input_window
+          [:input {:type "text" :id "message" :name "message"}]]]]])))
