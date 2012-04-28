@@ -13,6 +13,11 @@
         [:section#chat_window 
          [:div#text_window
           (when dummy?
-            [:p "Moritz: >created team REWE"])
+           (list
+            [:p {:data-username "moritz" :data-usercolor "red"} "I'm really hungry"
+            [:span.emoticon {:data-emoticon "lol"}]]
+            [:p {:data-username "gregor" :data-usercolor "orange"} "wtf"
+            [:span.emoticon {:data-emoticon "wtf"}]]
+            [:p {:data-username "daniel" :data-usercolor "yellow"} "created team Havanna "]))
           [:section.input-field
-           [:p {:contenteditable "true" :id "message" :name "message"}]]]]]])))
+           [:input {:type "text" :id "message" :name "message"}]]]]]])))
