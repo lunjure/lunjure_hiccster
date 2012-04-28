@@ -25,6 +25,7 @@
      "stop spamming... let's go "
     [:span.emoticon {:data-emoticon "sad"}]]
     [:p.status {:data-time "04:24"} "gregor created team REWE"]
+
     [:p.status {:data-time "04:24"} "gerrit joined team REWE"]
     [:p.status {:data-time "04:25"} "guido joined team REWE"]))
 
@@ -104,6 +105,8 @@
        [:h1 title]
         [:div#roomname "the lunjure crew"]] 
       [:div.inner-box 
+      (when dummy?
+      [:div#testbutton "add new p"])
        [:div 
         [:div#text_pad 
          [:div.wrapper
