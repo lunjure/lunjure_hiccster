@@ -100,6 +100,17 @@ header#main_header {
     width: 500px;
     background-color: #1f241c;
     border-radius: 10px; }
+    #chat_window #text_window > p {
+      line-height: 20px; }
+      #chat_window #text_window > p[data-usercolor="red"]:before {
+        color: #a7011c; }
+      #chat_window #text_window > p[data-usercolor="orange"]:before {
+        color: #a75701; }
+      #chat_window #text_window > p[data-usercolor="yellow"]:before {
+        color: #9da701; }
+      #chat_window #text_window > p:before {
+        content: attr(data-username) ": ";
+        text-transform: capitalize; }
     #chat_window #text_window:after {
       box-shadow: 0 -70px 70px -50px rgba(0, 0, 0, 0.2) inset, 0 70px 70px -50px rgba(235, 255, 155, 0.2) inset;
       pointer-events: none;
@@ -126,9 +137,12 @@ header#main_header {
         width: 100%;
         -webkit-appearance: none;
         background: none;
+        height: 40px;
+        line-height: 20px;
+        overflow: hidden;
+        color: #2fa701;
         font-size: 18px;
         font-family: CPMono;
-        color: #2fa701;
         border-width: 0; }
         #chat_window #text_window .input-field #message:focus {
           outline: 0; }
@@ -137,3 +151,16 @@ header#main_header {
           position: absolute;
           left: 0;
           top: 20px; }
+
+span.emoticon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  text-indent: 17px;
+  background-size: 17px 17px;
+  background-position: 50% 50%; }
+  span.emoticon[data-emoticon="lol"] {
+    background-image: url("/images/emoticons/bigSmile.png"); }
+  span.emoticon[data-emoticon="wtf"] {
+    background-image: url("/images/emoticons/whatTheFuck.png"); }

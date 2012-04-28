@@ -1,5 +1,6 @@
 ///lunjure CSS
 $base-path-font: '/fonts/';
+$base-path-images: '/images/';
 $windows-radius: 10px;
 
 ///fontface
@@ -167,7 +168,22 @@ header {
     border: {
       radius: $windows-radius;
     }
-
+    > p {
+      line-height: 20px;
+      &[data-usercolor="red"]:before {
+        color: rgba(167,1,28,1);
+      }
+      &[data-usercolor="orange"]:before {
+        color: rgba(167,87,1,1);
+      }
+      &[data-usercolor="yellow"]:before {
+        color: rgba(157,167,1,1);
+      }
+      &:before {
+        content: attr(data-username) ": ";
+        text-transform: capitalize;
+      }
+    }
     &:after {
       box: {
         shadow: 0 -70px 70px -50px rgba(0,0,0,0.2) inset,
@@ -208,11 +224,14 @@ header {
         width: 100%;
         -webkit-appearance: none;
         background: none;
+        height: 40px;
+        line-height: 20px;
+        overflow: hidden;
+        color: rgba(47,167,1,1);
         font: {
           size: 18px;
           family: CPMono;
         }
-        color: rgba(47,167,1,1);
         border: {
           width: 0;
         }
@@ -230,6 +249,29 @@ header {
   }
 }
 
+span {
+  &.emoticon {
+    display:inline-block;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    text-indent: 17px;
+    background: {
+      size: 17px 17px;
+      position: 50% 50%;
+    }
+    &[data-emoticon="lol"] {
+     background: {
+      image: url($base-path-images + 'emoticons/bigSmile.png');
+     }
+    }
+    &[data-emoticon="wtf"] {
+     background: {
+      image: url($base-path-images + 'emoticons/whatTheFuck.png');
+     }
+    }
+  }
+}
 
 
 
