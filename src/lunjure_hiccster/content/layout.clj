@@ -18,7 +18,7 @@
       [:title title]
       [:meta {:charset "utf-8"}]
       [:link {:href (path "images/favicon.ico") :rel "shortcut icon" :type "image/x-icon"}]
-      [:link {:href (path "css/main.css") :rel "stylesheet" :type "text/css"}]
+      [:link {:href (path "css/main.css") :rel "stylesheet" :type "text/css"}]]
      [:body {:class (classes->string classes) }
       [:div#main_wrapper
        [:div#content.content-wrapper
