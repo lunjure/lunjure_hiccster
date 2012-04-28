@@ -48,6 +48,7 @@ header#main_header {
   background-color: rgba(0, 0, 0, 0); }
 
 #bottom_navigation {
+  z-index: 999;
   box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5) inset;
   font-size: 10px;
   font-family: CPMono;
@@ -57,12 +58,29 @@ header#main_header {
   padding: 10px;
   background: #bfc1a8; }
   #bottom_navigation ul li {
-    list-style-type: none; }
+    list-style-type: none;
+    display: inline; }
+    #bottom_navigation ul li:not(:last-child):after {
+      content: ' | '; }
     #bottom_navigation ul li a {
       color: #555;
       text-decoration: none; }
       #bottom_navigation ul li a:hover {
         color: #222; }
+
+header#chat_title {
+  z-index: 999;
+  box-shadow: 2px -2px 0 rgba(0, 0, 0, 0.5) inset;
+  font-size: 10px;
+  font-family: CPMono;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background: #bfc1a8; }
+  header#chat_title #roomname:before {
+    content: "room: "; }
 
 #login_section {
   position: absolute;
@@ -144,8 +162,6 @@ header#main_header {
           #chat_window #text_window > .output > p.status:before {
             content: '';
             padding-left: 20px; }
-          #chat_window #text_window > .output > p.status:after {
-            content: ''; }
     #chat_window #text_window:after {
       box-shadow: 0 -70px 70px -50px rgba(0, 0, 0, 0.2) inset, 0 70px 70px -50px rgba(235, 255, 155, 0.2) inset;
       pointer-events: none;
@@ -251,6 +267,8 @@ ul.ui-autocomplete {
     z-index: 5; }
     #text_pad ul.team li.team-name {
       list-style-type: none; }
+      #text_pad ul.team li.team-name span:after {
+        content: ' :'; }
       #text_pad ul.team li.team-name ul.users {
         margin: 0 0 0 20px; }
         #text_pad ul.team li.team-name ul.users li.user {
