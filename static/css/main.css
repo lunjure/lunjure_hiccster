@@ -272,11 +272,16 @@ ul.ui-autocomplete {
       #text_pad ul.team li.team-name ul.users {
         margin: 0 0 0 20px; }
         #text_pad ul.team li.team-name ul.users li.user {
+          margin: 2px;
+          width: 60px;
+          text-align: center;
           -webkit-user-select: auto;
           display: inline-block; }
-          #text_pad ul.team li.team-name ul.users li.user:not(:last-child):after {
-            content: ",";
-            padding: 0 5px 0 0; }
+          #text_pad ul.team li.team-name ul.users li.user img {
+            display: block;
+            margin: auto;
+            width: 40px;
+            height: 40px; }
   #text_pad:before {
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
