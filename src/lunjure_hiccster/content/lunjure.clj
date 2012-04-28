@@ -31,13 +31,13 @@
           [:div.output
           (when dummy?
            (list
-            [:p {:name "moritz" :type "red" :alt "04:20"} 
+            [:p {:data-username "moritz" :data-usercolor "red" :data-time "04:20"} 
              "I'm really hungry "
             [:span.emoticon {:data-emoticon "lol"}]]
-            [:p {:name "Guido" :type "yellow" :alt "04:20"} 
+            [:p {:data-username "Guido" :data-usercolor "yellow" :data-time "04:20"} 
              "does every name have to be 6 characters long? "
             [:span.emoticon {:type "blink"}]]
-            [:p {:name "gregor" :type "orange" :alt "04:21"} 
+            [:p {:data-username "gregor" :data-usercolor "orange" :data-time "04:21"} 
              "no..duuhh "
             [:span.emoticon {:data-emoticon "wtf"}]
             [:span.emoticon {:data-emoticon "smile"}]
@@ -47,7 +47,8 @@
             [:span.emoticon {:data-emoticon "coffee"}]
             [:span.emoticon {:data-emoticon "sun"}]
              " and we can also use multiple emoticons"]
-            [:p.status "daniel created team Havanna "]))]
+            [:p.status "daniel created team Havanna "]
+            [:p.status "moritz joined team Havanna "]))]
           [:section.input-field
            [:input {:type "text" :id "message" :name "message"}]]]
 

@@ -126,19 +126,19 @@ header#main_header {
       #chat_window #text_window > .output > p {
         position: relative;
         line-height: 20px; }
-        #chat_window #text_window > .output > p[type="red"]:before {
+        #chat_window #text_window > .output > p[data-usercolor="red"]:before {
           color: #a7011c; }
-        #chat_window #text_window > .output > p[type="orange"]:before {
+        #chat_window #text_window > .output > p[data-usercolor="orange"]:before {
           color: #a75701; }
-        #chat_window #text_window > .output > p[type="yellow"]:before {
+        #chat_window #text_window > .output > p[data-usercolor="yellow"]:before {
           color: #9da701; }
         #chat_window #text_window > .output > p:before {
-          content: attr(name) ": "; }
+          content: attr(data-username) ": "; }
         #chat_window #text_window > .output > p:after {
           position: absolute;
           right: -100px;
           top: 0;
-          content: "(" attr(alt) ")"; }
+          content: "(" attr(data-time) ")"; }
         #chat_window #text_window > .output > p.status {
           color: #9da701; }
           #chat_window #text_window > .output > p.status:before {
