@@ -30,6 +30,11 @@
        [:nav
         [:ul
          [:li
-          [:a {:href "lunjure_hiccster.content.impressum"} "Impressum"]]]]]]
+          [:a {:href "lunjure_hiccster.content.impressum"} "impressum/imprint"]]
+         [:li
+          [:a {:href "lunjure_hiccster.content.faq"} "faq"]]
+         [:li
+          [:a {:href "lunjure_hiccster.content.about"} "about"]]
+          ]]]]
       (when-not dummy?
         [:script {:src "/lunjure.js"}])])))
