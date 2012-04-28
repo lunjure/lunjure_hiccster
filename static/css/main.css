@@ -82,9 +82,10 @@ header#main_header {
 
 #chat_window {
   position: absolute;
+  height: 90%;
   right: 50px;
   top: 50px;
-  padding: 0 0 50px 0; }
+  padding: 0 0 0 0; }
   #chat_window *::selection {
     background-color: #2fa701;
     color: #1f241c; }
@@ -95,7 +96,7 @@ header#main_header {
     color: #2fa701;
     padding: 20px;
     position: relative;
-    height: 300px;
+    height: 70%;
     width: 500px;
     background-color: #1f241c;
     border-radius: 10px; }
