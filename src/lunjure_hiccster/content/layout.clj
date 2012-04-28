@@ -12,7 +12,7 @@
 
 
 (defn layout [meta & content]
-  (let [{:keys [title classes]} meta]
+  (let [{:keys [title classes dummy?]} meta]
     (html5 {:lang "de"}
      [:head
       [:title title]
@@ -21,7 +21,7 @@
       [:link {:href (path "css/main.css") :rel "stylesheet" :type "text/css"}]
       [:script {:src "/jquery-1.7.2.min.js"}]
       [:script {:src "/jquery-ui-1.8.19.custom.min.js"}]
-      [:script {:src "js/greg.js"}]]
+      (when dummy? [:script {:src "js/greg.js"}])]
      [:body {:class (classes->string classes) }
       [:div#main_wrapper
        [:div#content.content-wrapper
@@ -31,4 +31,5 @@
         [:ul
          [:li
           [:a {:href "lunjure_hiccster.content.impressum"} "Impressum"]]]]]]
-      [:script {:src "/lunjure.js"}]])))
+      (when-not dummy?
+        [:script {:src "/lunjure.js"}])])))

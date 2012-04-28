@@ -7,6 +7,7 @@
   ([dummy?]
      (layout
       {:title "(lunjure)"
+       :dummy? dummy?
        :classes ["body chatroom"]}
       [:div.inner-box 
        [:div 
