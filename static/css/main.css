@@ -125,6 +125,10 @@ header#chat_title {
   #chat_window *::selection {
     background-color: #2fa701;
     color: #1f241c; }
+  #chat_window ::-webkit-scrollbar {
+    width: 6px; }
+  #chat_window ::-webkit-scrollbar-thumb {
+    background-color: #2fa701; }
   #chat_window #text_window {
     overflow-x: visible;
     box-shadow: 0 0 200px rgba(0, 0, 0, 0.9) inset;
@@ -156,6 +160,7 @@ header#chat_title {
           position: absolute;
           right: -100px;
           top: 0;
+          padding: 0 8px 0 0;
           content: "(" attr(data-time) ")"; }
         #chat_window #text_window > .output > p.status {
           color: #9da701; }
@@ -387,3 +392,18 @@ span.emoticon {
     background-image: url("/images/emoticons/rain.png"); }
   span.emoticon[data-emoticon="sun"] {
     background-image: url("/images/emoticons/sun.png"); }
+
+#testbutton {
+  z-index: 999;
+  box-shadow: -2px -2px 0 rgba(0, 0, 0, 0.5) inset;
+  background-color: #bfc1a8;
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  width: 100px;
+  text-align: center;
+  font-family: CPMono;
+  height: 40px;
+  line-height: 40px; }

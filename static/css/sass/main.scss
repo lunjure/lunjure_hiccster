@@ -80,6 +80,7 @@ header {
  }
 }
 #bottom_navigation {
+  z-index: 999;
   box-shadow: 2px 2px 0 rgba(0,0,0,0.5) inset;
   font: {
    size: 10px;
@@ -95,6 +96,10 @@ header {
       list-style: {
         type: none;
       }
+      display: inline;
+      &:not(:last-child):after {
+       content: ' | ';
+      }
       a {
         color: #555;
         text: {
@@ -108,6 +113,26 @@ header {
   }
  }
 
+header#chat_title {
+  z-index: 999;
+  box-shadow: 2px -2px 0 rgba(0,0,0,0.5) inset;
+  font: {
+   size: 10px;
+   family: CPMono;
+  }
+  text-align: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background: darken($room-bg-color, 10%);
+  #roomname {
+    &:before {
+      content: 'room: '
+
+    }
+  }
+}
 #login_section {
  position: absolute; 
  left: 50%; 
@@ -178,6 +203,16 @@ header {
       }  
     color: rgba(31,36,28,1);
   }
+  ::-webkit-scrollbar {
+      width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background-color: rgba(47,167,1,1);
+  }  
   #text_window {
       overflow-x:visible;
     box: {
@@ -221,6 +256,7 @@ header {
           position: absolute; 
           right: -100px;
           top:0;
+          padding: 0 8px 0 0;
           content: '(' attr(data-time) ')';
         }
         &.status{
@@ -228,9 +264,6 @@ header {
           &:before {
             content:'';
             padding-left: 20px;
-          }
-          &:after {
-            content:'';
           }
         }
       }
@@ -414,15 +447,22 @@ ul.ui-autocomplete {
       list-style: {
         type: none;
       }
+      span:after {
+        content: ' :';
+      }
       ul.users {
         margin: 0 0 0 20px;
         li.user {
+          margin: 2px;
+          width: 60px;
+          text-align: center;
         -webkit-user-select: auto;
           display: inline-block;
-          &:not(:last-child):after {
-            content: ",";
-            padding: 0 5px 0 0;
-
+          img {
+            display:block;
+            margin: auto;
+            width: 40px;
+            height: 40px;
           }
         }
       }
@@ -636,4 +676,18 @@ span {
 }
 
 
-
+#testbutton {
+  z-index: 999;
+  box-shadow: -2px -2px 0 rgba(0,0,0,0.5) inset;
+  background-color: darken($room-bg-color,10%);
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  width: 100px;
+  text-align: center;
+  font-family: CPMono;
+  height:40px;
+  line-height: 40px;
+}
