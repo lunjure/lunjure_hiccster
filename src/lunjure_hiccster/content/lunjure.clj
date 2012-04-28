@@ -15,4 +15,4 @@
           (when dummy?
             [:p "Moritz: >created team REWE"])]
          [:div#input_window
-          [:input {:type "text" :id "message" :name "message"}]]]]])))
+          [:p {:contenteditable "true" :id "message" :name "message"}]]]]])))
