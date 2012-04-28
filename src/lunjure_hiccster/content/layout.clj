@@ -19,10 +19,6 @@
       [:meta {:charset "utf-8"}]
       [:link {:href (path "images/favicon.ico") :rel "shortcut icon" :type "image/x-icon"}]
       [:link {:href (path "css/main.css") :rel "stylesheet" :type "text/css"}]
-      [:script {:src "/script/modernizr.min.js"}]
-      [:script {:src "/script/css_browser_selector.js"}]
-      [:script {:src "/script/jquery.min.js"}]
-      [:script {:src "/script/jquery-ui.min.js"}]
       "<!--[if lt IE 9]>"
       [:script {:src "//html5shiv.googlecode.com/svn/trunk/html5.js"}]
       "<![endif]-->"]
