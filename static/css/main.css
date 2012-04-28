@@ -308,13 +308,22 @@ ul.ui-autocomplete {
     background-size: 22px 22px;
     content: ''; }
   #text_pad > div:after {
-    box-shadow: 4px 0 0 #555555, 0 2px 4px rgba(0, 0, 0, 0.5);
-    background-color: #aaa;
     content: '';
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: #aaa;
     position: absolute;
     z-index: 5;
     width: 100%;
-    padding: 2px;
+    padding: 0 2px;
     height: 30px;
     top: -15px;
     left: -6px; }
+  #text_pad > div:before {
+    content: '';
+    position: absolute;
+    -webkit-transform: skewY(60deg);
+    right: -3px;
+    top: -10px;
+    height: 30px;
+    width: 5px;
+    background: #555; }
