@@ -47,6 +47,23 @@ header#main_header {
   font-family: CPMono;
   background-color: rgba(0, 0, 0, 0); }
 
+#bottom_navigation {
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5) inset;
+  font-size: 10px;
+  font-family: CPMono;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  background: #bfc1a8; }
+  #bottom_navigation ul li {
+    list-style-type: none; }
+    #bottom_navigation ul li a {
+      color: #555;
+      text-decoration: none; }
+      #bottom_navigation ul li a:hover {
+        color: #222; }
+
 #login_section {
   position: absolute;
   left: 50%;
@@ -265,7 +282,7 @@ ul.ui-autocomplete {
   line-height: 22px;
   position: absolute;
   right: 50px;
-  top: 50px;
+  top: 100px;
   width: 400px;
   height: 400px;
   background-image: -webkit-linear-gradient(90deg, #b7d7be, #b7d7be 10%, #e5e6a9 10%, #e5e6a9 100%);
