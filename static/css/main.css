@@ -1,0 +1,63 @@
+@font-face {
+  font-family: '!PaulMaulRegular';
+  src: url("/fonts/paulmaul/!PaulMaul-webfont.eot");
+  src: url("/fonts/paulmaul/!PaulMaul-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/paulmaul/!PaulMaul-webfont.woff") format("woff"), url("/fonts/paulmaul/!PaulMaul-webfont.ttf") format("truetype"), url("/fonts/paulmaul/!PaulMaul-webfont.svg#!PaulMaulRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'CPMono';
+  src: url("/fonts/cpmono/cpmono_v07_plain-webfont.eot");
+  src: url("/fonts/cpmono/cpmono_v07_plain-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/cpmono/cpmono_v07_plain-webfont.woff") format("woff"), url("/fonts/cpmono/cpmono_v07_plain-webfont.ttf") format("truetype"), url("/fonts/cpmono/cpmono_v07_plain-webfont.svg#CPMono_v07PlainCPMonov07Plain") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+html,
+body {
+  width: 100%; }
+
+#main_wrapper {
+  width: 100%; }
+
+header#main_header {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100px;
+  line-height: 100px;
+  width: 600px;
+  margin: -50px 0 0 -300px;
+  text-align: center;
+  font-size: 40px;
+  font-family: CPMono;
+  background-color: rgba(0, 0, 0, 0); }
+
+#login_section {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100px;
+  line-height: 100px;
+  width: 300px;
+  margin: 50px 0 0 -150px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0); }
+  #login_section button {
+    -webkit-appearance: none;
+    width: 300px;
+    margin: 20px auto;
+    display: block;
+    line-height: 50px;
+    height: 50px;
+    font-size: 18px;
+    font-family: CPMono;
+    background-color: #c8c8c8;
+    border-radius: 4px;
+    border-width: 1px 1px 5px 1px;
+    border-color: #646464;
+    border-style: solid;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.9); }
