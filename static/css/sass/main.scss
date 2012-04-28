@@ -82,6 +82,7 @@ header {
   color: rgba(0,0,0,0);
  }
   button {
+    cursor: pointer;
    -webkit-appearance: none;
    width: 300px;
    margin: 20px auto;
@@ -97,12 +98,29 @@ header {
    }
    border: {
     radius: 4px;
-    width: 1px 1px 5px 1px;
-    color: rgba(100,100,100,1);
+    width: 1px 1px 1px 1px;
+    color: rgba(180,180,180,1);
     style: solid;
    }
    box: {
-    shadow: 0 0 10px rgba(255,255,255,0.9);
+    shadow: 0 0 19px rgba(255,255,255,0.6) inset,
+            0 5px 0 rgba(100,100,100,1);
    }
+   &:hover {
+     background: {
+      color: rgba(180,180,180,1);
+     }  
+     border: {
+      color: rgba(160,160,160,1);
+     }
+   }
+   &:active {
+   margin: 24px auto;
+   box: {
+    shadow: 0 0 19px rgba(255,255,255,0.6) inset,
+            0 1px 0 rgba(100,100,100,1);
+   }
+
+   } 
   }
 }

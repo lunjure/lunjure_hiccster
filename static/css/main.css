@@ -47,6 +47,7 @@ header#main_header {
   text-align: center;
   background-color: rgba(0, 0, 0, 0); }
   #login_section button {
+    cursor: pointer;
     -webkit-appearance: none;
     width: 300px;
     margin: 20px auto;
@@ -57,7 +58,13 @@ header#main_header {
     font-family: CPMono;
     background-color: #c8c8c8;
     border-radius: 4px;
-    border-width: 1px 1px 5px 1px;
-    border-color: #646464;
+    border-width: 1px 1px 1px 1px;
+    border-color: #b4b4b4;
     border-style: solid;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.9); }
+    box-shadow: 0 0 19px rgba(255, 255, 255, 0.6) inset, 0 5px 0 #646464; }
+    #login_section button:hover {
+      background-color: #b4b4b4;
+      border-color: #a0a0a0; }
+    #login_section button:active {
+      margin: 24px auto;
+      box-shadow: 0 0 19px rgba(255, 255, 255, 0.6) inset, 0 1px 0 #646464; }
