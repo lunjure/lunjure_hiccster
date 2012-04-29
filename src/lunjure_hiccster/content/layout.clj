@@ -1,5 +1,6 @@
 (ns lunjure_hiccster.content.layout
-  (:use hiccup.page)
+  (:use hiccup.page
+        lunjure_hiccster.helpers.dummies)
   (:require [clojure.string :as str]))
 
 (defn- classes->string [classes]
