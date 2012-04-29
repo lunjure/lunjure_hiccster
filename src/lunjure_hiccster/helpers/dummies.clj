@@ -60,15 +60,6 @@
      [:ul.users 
       (list-user "fabian" "true")
       (list-user "fabian" "true")
-      (list-user "max")
-      (list-user "fabian" "true")
-      (list-user "fabian" "true")
-      (list-user "fabian" "true")
-      (list-user "fabian" "true")
-      (list-user "fabian" "true")
-      (list-user "fabian" "true")
-      (list-user "steffen")
-      (list-user "thisnameisreallylong")
       (list-user "florian")
       (list-user "mike")]]]
     [:ul.team
@@ -77,12 +68,16 @@
      [:ul.users 
       (list-user "fabian" "true")
       (list-user "fabian" "true")
+      (list-user "fabian" "true")
+      (list-user "fabian" "true")
       (list-user "daniel")
       (list-user "moritz heidkamp")]]]
     [:ul.team
      [:li.team-name 
      [:span "REWE"]
      [:ul.users 
+      (list-user "fabian" "true")
+      (list-user "fabian" "true")
       (list-user "fabian" "true")
       (list-user "fabian" "true")
       (list-user "fabian" "true")

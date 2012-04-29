@@ -549,17 +549,27 @@ ul.ui-autocomplete {
     z-index: 5;
     &:nth-child(2n + 1) {
       li.team-name ul.users li.user.avatar {
+        -webkit-transform: rotateZ(17deg);
        &:nth-child(2n + 1){
-        -webkit-transform: rotateZ(-7deg);
+        -webkit-transform: rotateZ(-17deg);
        }
        &:nth-child(3n + 1){
         -webkit-transform: rotateZ(7deg);
+       }
+       &:nth-child(4n + 1){
+        -webkit-transform: rotateZ(23deg);
        }
        &:nth-child(5n + 1){
         -webkit-transform: rotateZ(12deg) ;
        }
        &:nth-child(6n + 1){
         -webkit-transform: rotateZ(-12deg);
+       }
+       &:nth-child(7n + 1){
+        -webkit-transform: rotateZ(-22deg);
+       }
+       &:nth-child(8n + 1){
+        -webkit-transform: rotateZ(2deg);
        }
       }
     }
@@ -571,11 +581,20 @@ ul.ui-autocomplete {
        &:nth-child(3n + 1){
         -webkit-transform: rotateZ(3deg);
        }
+       &:nth-child(4n + 1){
+        -webkit-transform: rotateZ(-22deg);
+       }
        &:nth-child(5n + 1){
         -webkit-transform: rotateZ(10deg);
        }
        &:nth-child(6n + 1){
         -webkit-transform: rotateZ(-9deg);
+       }
+       &:nth-child(7n + 1){
+        -webkit-transform: rotateZ(9deg);
+       }
+       &:nth-child(8n + 1){
+        -webkit-transform: rotateZ(-14deg);
        }
       }
     }
@@ -628,17 +647,24 @@ ul.ui-autocomplete {
           &.avatar {
            background-color: #fff;
            box-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+            -webkit-transform: rotateZ(-7deg);
            &:nth-child(2n + 1){
             -webkit-transform: rotateZ(7deg);
            }
            &:nth-child(3n + 1){
             -webkit-transform: rotateZ(-7deg);
            }
+           &:nth-child(4n + 1){
+            -webkit-transform: rotateZ(-22deg);
+           }
            &:nth-child(5n + 1){
             -webkit-transform: rotateZ(-12deg);
            }
            &:nth-child(6n + 1){
             -webkit-transform: rotateZ(12deg);
+           }
+           &:nth-child(7n + 1){
+            -webkit-transform: rotateZ(22deg);
            }
            > div {
              background: {

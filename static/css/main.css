@@ -292,22 +292,36 @@ ul.ui-autocomplete {
   #text_pad ul.team {
     position: relative;
     z-index: 5; }
-    #text_pad ul.team:nth-child(2n + 1) li.team-name ul.users li.user.avatar:nth-child(2n + 1) {
-      -webkit-transform: rotateZ(-7deg); }
-    #text_pad ul.team:nth-child(2n + 1) li.team-name ul.users li.user.avatar:nth-child(3n + 1) {
-      -webkit-transform: rotateZ(7deg); }
-    #text_pad ul.team:nth-child(2n + 1) li.team-name ul.users li.user.avatar:nth-child(5n + 1) {
-      -webkit-transform: rotateZ(12deg); }
-    #text_pad ul.team:nth-child(2n + 1) li.team-name ul.users li.user.avatar:nth-child(6n + 1) {
-      -webkit-transform: rotateZ(-12deg); }
+    #text_pad ul.team:nth-child(2n + 1) li.team-name ul.users li.user.avatar {
+      -webkit-transform: rotateZ(17deg); }
+      #text_pad ul.team:nth-child(2n + 1) li.team-name ul.users li.user.avatar:nth-child(2n + 1) {
+        -webkit-transform: rotateZ(-17deg); }
+      #text_pad ul.team:nth-child(2n + 1) li.team-name ul.users li.user.avatar:nth-child(3n + 1) {
+        -webkit-transform: rotateZ(7deg); }
+      #text_pad ul.team:nth-child(2n + 1) li.team-name ul.users li.user.avatar:nth-child(4n + 1) {
+        -webkit-transform: rotateZ(23deg); }
+      #text_pad ul.team:nth-child(2n + 1) li.team-name ul.users li.user.avatar:nth-child(5n + 1) {
+        -webkit-transform: rotateZ(12deg); }
+      #text_pad ul.team:nth-child(2n + 1) li.team-name ul.users li.user.avatar:nth-child(6n + 1) {
+        -webkit-transform: rotateZ(-12deg); }
+      #text_pad ul.team:nth-child(2n + 1) li.team-name ul.users li.user.avatar:nth-child(7n + 1) {
+        -webkit-transform: rotateZ(-22deg); }
+      #text_pad ul.team:nth-child(2n + 1) li.team-name ul.users li.user.avatar:nth-child(8n + 1) {
+        -webkit-transform: rotateZ(2deg); }
     #text_pad ul.team:nth-child(3n + 1) li.team-name ul.users li.user.avatar:nth-child(2n + 1) {
       -webkit-transform: rotateZ(-5deg); }
     #text_pad ul.team:nth-child(3n + 1) li.team-name ul.users li.user.avatar:nth-child(3n + 1) {
       -webkit-transform: rotateZ(3deg); }
+    #text_pad ul.team:nth-child(3n + 1) li.team-name ul.users li.user.avatar:nth-child(4n + 1) {
+      -webkit-transform: rotateZ(-22deg); }
     #text_pad ul.team:nth-child(3n + 1) li.team-name ul.users li.user.avatar:nth-child(5n + 1) {
       -webkit-transform: rotateZ(10deg); }
     #text_pad ul.team:nth-child(3n + 1) li.team-name ul.users li.user.avatar:nth-child(6n + 1) {
       -webkit-transform: rotateZ(-9deg); }
+    #text_pad ul.team:nth-child(3n + 1) li.team-name ul.users li.user.avatar:nth-child(7n + 1) {
+      -webkit-transform: rotateZ(9deg); }
+    #text_pad ul.team:nth-child(3n + 1) li.team-name ul.users li.user.avatar:nth-child(8n + 1) {
+      -webkit-transform: rotateZ(-14deg); }
     #text_pad ul.team li.team-name {
       position: relative;
       list-style-type: none; }
@@ -346,15 +360,20 @@ ul.ui-autocomplete {
               height: 40px; }
           #text_pad ul.team li.team-name ul.users li.user.avatar {
             background-color: #fff;
-            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); }
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            -webkit-transform: rotateZ(-7deg); }
             #text_pad ul.team li.team-name ul.users li.user.avatar:nth-child(2n + 1) {
               -webkit-transform: rotateZ(7deg); }
             #text_pad ul.team li.team-name ul.users li.user.avatar:nth-child(3n + 1) {
               -webkit-transform: rotateZ(-7deg); }
+            #text_pad ul.team li.team-name ul.users li.user.avatar:nth-child(4n + 1) {
+              -webkit-transform: rotateZ(-22deg); }
             #text_pad ul.team li.team-name ul.users li.user.avatar:nth-child(5n + 1) {
               -webkit-transform: rotateZ(-12deg); }
             #text_pad ul.team li.team-name ul.users li.user.avatar:nth-child(6n + 1) {
               -webkit-transform: rotateZ(12deg); }
+            #text_pad ul.team li.team-name ul.users li.user.avatar:nth-child(7n + 1) {
+              -webkit-transform: rotateZ(22deg); }
             #text_pad ul.team li.team-name ul.users li.user.avatar > div {
               background-image: none; }
             #text_pad ul.team li.team-name ul.users li.user.avatar img {
