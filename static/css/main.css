@@ -292,6 +292,22 @@ ul.ui-autocomplete {
   #text_pad ul.team {
     position: relative;
     z-index: 5; }
+    #text_pad ul.team:nth-child(2n + 1) .avatar:nth-child(2n + 1) {
+      -webkit-transform: rotateZ(-7deg) !important; }
+    #text_pad ul.team:nth-child(2n + 1) .avatar:nth-child(3n + 1) {
+      -webkit-transform: rotateZ(7deg) !important; }
+    #text_pad ul.team:nth-child(2n + 1) .avatar:nth-child(5n + 1) {
+      -webkit-transform: rotateZ(12deg) !important; }
+    #text_pad ul.team:nth-child(2n + 1) .avatar:nth-child(6n + 1) {
+      -webkit-transform: rotateZ(-12deg) !important; }
+    #text_pad ul.team:nth-child(3n + 1) .avatar:nth-child(2n + 1) {
+      -webkit-transform: rotateZ(-5deg) !important; }
+    #text_pad ul.team:nth-child(3n + 1) .avatar:nth-child(3n + 1) {
+      -webkit-transform: rotateZ(3deg) !important; }
+    #text_pad ul.team:nth-child(3n + 1) .avatar:nth-child(5n + 1) {
+      -webkit-transform: rotateZ(10deg) !important; }
+    #text_pad ul.team:nth-child(3n + 1) .avatar:nth-child(6n + 1) {
+      -webkit-transform: rotateZ(-9deg) !important; }
     #text_pad ul.team li.team-name {
       position: relative;
       list-style-type: none; }

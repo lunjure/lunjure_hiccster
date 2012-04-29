@@ -73,12 +73,18 @@
      [:li.team-name 
      [:span {:data-lunchtime "04:20"} "Havanna"]
      [:ul.users 
+      (list-user "fabian" "true")
+      (list-user "fabian" "true")
       (list-user "daniel")
       (list-user "moritz heidkamp")]]]
     [:ul.team
      [:li.team-name 
      [:span "REWE"]
      [:ul.users 
+      (list-user "fabian" "true")
+      (list-user "fabian" "true")
+      (list-user "fabian" "true")
+      (list-user "fabian" "true")
       (list-user "gregor")
       (list-user "gerrit")
       (list-user "guido")]]]))
