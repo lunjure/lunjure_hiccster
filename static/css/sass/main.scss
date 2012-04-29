@@ -245,6 +245,7 @@ header#chat_title {
   border: {
     radius: 15px;
   }
+  margin: 20px;
   width: 50%;
   position: absolute;
   height: 90%;
@@ -533,8 +534,9 @@ ul.ui-autocomplete {
   position: absolute;
   right: 50px;
   top: 100px;
-  width: 300px;
-  height: 300px;
+  min-width: 300px;
+  max-width: 35%;
+  min-height: 300px;
   background: {
     image: -webkit-linear-gradient(90deg, 
                                    #b7d7be,
@@ -731,7 +733,7 @@ ul.ui-autocomplete {
   }
   > div {
    height: 100%;
-   overflow: scroll;
+   overflow: hidden;
   }
   > div:after {
     content: '';
@@ -778,143 +780,6 @@ img.emoticon {
 
 }
 
-span {
-  &.emoticon {
-    display:inline-block;
-    width: 17px;
-    position:relative;
-    top:3px;
-    height: 17px;
-    padding: 0 2px;
-    overflow: hidden;
-    text-indent: 17px;
-    background: {
-      size: 17px 17px;
-      position: 50% 50%;
-      repeat: no-repeat;
-    }
-    &[data-emoticon="lol"] {
-     background: {
-      image: url($base-path-images + 'emoticons/bigSmile.png');
-     }
-    }
-    &[data-emoticon="blink"] {
-     background: {
-      image: url($base-path-images + 'emoticons/blink.png');
-     }
-    }
-    &[data-emoticon="smile"] {
-     background: {
-      image: url($base-path-images + 'emoticons/smile.png');
-     }
-    }
-    &[data-emoticon="bigblink"] {
-     background: {
-      image: url($base-path-images + 'emoticons/bigBlink.png');
-     }
-    }
-    &[data-emoticon="blinktongue"] {
-     background: {
-      image: url($base-path-images + 'emoticons/blinkTongue.png');
-     }
-    }
-    &[data-emoticon="tongue"] {
-     background: {
-      image: url($base-path-images + 'emoticons/tongue.png');
-     }
-    }
-    &[data-emoticon="sleep"] {
-     background: {
-      image: url($base-path-images + 'emoticons/zzz.png');
-     }
-    }
-    &[data-emoticon="wtf"] {
-     background: {
-      image: url($base-path-images + 'emoticons/whatTheFuck.png');
-     }
-    }
-    &[data-emoticon="hehe"] {
-     background: {
-      image: url($base-path-images + 'emoticons/hehe.png');
-     }
-    }
-    &[data-emoticon="sad"] {
-     background: {
-      image: url($base-path-images + 'emoticons/sad.png');
-     }
-    }
-    &[data-emoticon="cry"] {
-     background: {
-      image: url($base-path-images + 'emoticons/cry.png');
-     }
-    }
-    &[data-emoticon="nosay"] {
-     background: {
-      image: url($base-path-images + 'emoticons/IdontGiveAFuck.png');
-     }
-    }
-    &[data-emoticon="oo"] {
-     background: {
-      image: url($base-path-images + 'emoticons/O.png');
-     }
-    }
-    &[data-emoticon="heart"] {
-     background: {
-      image: url($base-path-images + 'emoticons/love.png');
-     }
-    }
-    &[data-emoticon="minus1"] {
-     background: {
-      image: url($base-path-images + 'emoticons/minusOne.png');
-     }
-    }
-    &[data-emoticon="plus1"] {
-     background: {
-      image: url($base-path-images + 'emoticons/plusOne.png');
-     }
-    }
-    &[data-emoticon="burger"] {
-     background: {
-      image: url($base-path-images + 'emoticons/burger.png');
-     }
-    }
-    &[data-emoticon="coffee"] {
-     background: {
-      image: url($base-path-images + 'emoticons/coffee.png');
-     }
-    }
-    &[data-emoticon="ice"] {
-     background: {
-      image: url($base-path-images + 'emoticons/ice.png');
-     }
-    }
-    &[data-emoticon="rain"] {
-     background: {
-      image: url($base-path-images + 'emoticons/rain.png');
-     }
-    }
-    &[data-emoticon="sun"] {
-     background: {
-      image: url($base-path-images + 'emoticons/sun.png');
-     }
-    }
-  }
-}
-
-@-webkit-keyframes blink {
-  0% {
-    visibility:visible;
-  }
-  30% {
-    visibility:hidden;
-  }
-  71% {
-    visibility:hidden;
-  }
-  100% {
-    visibility:visible;
-  }
-}
 
 #testbutton {
   z-index: 999;
