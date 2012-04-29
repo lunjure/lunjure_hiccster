@@ -58,6 +58,8 @@
      [:li.team-name 
       [:span "Undecided"]
      [:ul.users 
+      (list-user "fabian" "true")
+      (list-user "fabian" "true")
       (list-user "max")
       (list-user "fabian" "true")
       (list-user "fabian" "true")
