@@ -16,7 +16,7 @@
          [:div#roomname "the lunjure crew"]] 
        [:div.inner-box 
        (when dummy?
-       [:div#testbutton "add new p"])
+       [:button#testbutton {:type "button"} "add line"])
         [:div 
          [:div#text_pad 
           [:div.wrapper
