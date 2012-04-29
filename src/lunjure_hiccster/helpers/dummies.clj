@@ -71,7 +71,7 @@
       (list-user "mike")]]]
     [:ul.team
      [:li.team-name 
-     [:span "Havanna"]
+     [:span {:data-lunchtime "04:20"} "Havanna"]
      [:ul.users 
       (list-user "daniel")
       (list-user "moritz heidkamp")]]]

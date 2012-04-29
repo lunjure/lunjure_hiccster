@@ -549,11 +549,23 @@ ul.ui-autocomplete {
     z-index: 5;
 
     li.team-name {
+     position: relative;
       list-style: {
         type: none;
       }
+      span {
+       position:relative;
+       display: inline-block;
+       width: 100%;
+      }
       span:after {
         content: ' :';
+      }
+      span:before {
+        content: '' attr(data-lunchtime);
+        position: absolute;
+        right: 0;
+        top: 0;
       }
       ul.users {
         margin: 0 0 0 20px;
