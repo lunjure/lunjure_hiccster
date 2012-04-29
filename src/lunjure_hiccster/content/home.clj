@@ -10,5 +10,6 @@
      [:header#main_header 
       [:h1 title]]
      [:div.inner-box 
-      [:div#login_section 
-       [:button {:type "button"} "login with foursquare"]]])))
+      [:div#login_section
+       [:form {:action "/login" :method "post"}
+        [:button {:type "submit"} "login with foursquare"]]]])))
