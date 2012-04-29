@@ -390,6 +390,13 @@ ul.ui-autocomplete {
   #text_pad *::selection {
     background-color: rgba(222, 167, 227, 0.8); }
 
+img.emoticon {
+  width: 17px;
+  position: relative;
+  top: 3px;
+  height: 17px;
+  padding: 0 2px; }
+
 span.emoticon {
   display: inline-block;
   width: 17px;

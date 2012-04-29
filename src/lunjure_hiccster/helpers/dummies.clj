@@ -1,7 +1,8 @@
 (ns lunjure_hiccster.helpers.dummies)
 
 (defn emoticon [name]
-  [:span.emoticon {:data-emoticon name}])
+        [:img.emoticon {:src "/images/emoticons/smile.png"}]
+  )
 
 (defn message [user color time message]
   [:p {:data-username user 

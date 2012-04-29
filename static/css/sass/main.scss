@@ -698,7 +698,14 @@ ul.ui-autocomplete {
 //
 ///emoticon
 //
+img.emoticon {
+    width: 17px;
+    position:relative;
+    top:3px;
+    height: 17px;
+    padding: 0 2px;
 
+}
 
 span {
   &.emoticon {
