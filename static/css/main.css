@@ -163,10 +163,12 @@ header#chat_title {
           padding: 0 8px 0 0;
           content: "(" attr(data-time) ")"; }
         #chat_window #text_window > .output > p.status {
+          padding-left: 20px;
           color: #9da701; }
+          #chat_window #text_window > .output > p.status:last-child {
+            -webkit-animation: blink 1000ms linear infinite; }
           #chat_window #text_window > .output > p.status:before {
-            content: '';
-            padding-left: 20px; }
+            content: ''; }
     #chat_window #text_window:after {
       box-shadow: 0 -70px 70px -50px rgba(0, 0, 0, 0.2) inset, 0 70px 70px -50px rgba(235, 255, 155, 0.2) inset;
       pointer-events: none;
@@ -392,6 +394,22 @@ span.emoticon {
     background-image: url("/images/emoticons/rain.png"); }
   span.emoticon[data-emoticon="sun"] {
     background-image: url("/images/emoticons/sun.png"); }
+
+@-webkit-keyframes blink {
+  0% {
+    visibility: visible; }
+
+  30% {
+    visibility: hidden; }
+
+  50% {
+    visibility: hidden; }
+
+  51% {
+    visibility: visible; }
+
+  100% {
+    visibility: visible; } }
 
 #testbutton {
   z-index: 999;

@@ -233,7 +233,7 @@ header#chat_title {
       radius: $windows-radius;
     }
     > .output {
-    padding: 0 100px 0 0;
+      padding: 0 100px 0 0;
       height: 80%;
       overflow-x:visible;
       overflow-y:auto;
@@ -260,10 +260,13 @@ header#chat_title {
           content: '(' attr(data-time) ')';
         }
         &.status{
+          padding-left: 20px;
           color: rgba(157,167,1,1);
+          &:last-child {
+          -webkit-animation: blink 1000ms linear infinite;
+          }
           &:before {
             content:'';
-            padding-left: 20px;
           }
         }
       }
@@ -675,6 +678,23 @@ span {
   }
 }
 
+@-webkit-keyframes blink {
+  0% {
+    visibility:visible;
+  }
+  30% {
+    visibility:hidden;
+  }
+  50% {
+    visibility:hidden;
+  }
+  51% {
+    visibility:visible;
+  }
+  100% {
+    visibility:visible;
+  }
+}
 
 #testbutton {
   z-index: 999;
