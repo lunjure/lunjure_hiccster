@@ -187,8 +187,6 @@ header#chat_title {
           visibility: visible;
           padding-left: 20px;
           color: #9da701; }
-          #chat_window #text_window > .output > p.status:last-child {
-            -webkit-animation: blink 500ms linear 3 backwards; }
           #chat_window #text_window > .output > p.status:before {
             content: ''; }
     #chat_window #text_window:after {
@@ -233,7 +231,7 @@ header#chat_title {
           text-align: right;
           position: absolute;
           left: -20px;
-          top: 0; }
+          top: 10px; }
 
 ul.ui-autocomplete {
   background-color: #1f241c;

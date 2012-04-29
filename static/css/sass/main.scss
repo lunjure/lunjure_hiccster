@@ -368,9 +368,6 @@ header#chat_title {
           visibility: visible;
           padding-left: 20px;
           color: rgba(157,167,1,1);
-          &:last-child {
-            -webkit-animation: blink 500ms linear 3 backwards;
-          }
           &:before {
             content:'';
           }
@@ -438,7 +435,7 @@ header#chat_title {
           }
           position: absolute;
           left: -20px;
-          top: 0;
+          top: 10px;
         }
       }
     }
