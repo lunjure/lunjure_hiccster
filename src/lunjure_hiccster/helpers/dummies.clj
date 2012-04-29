@@ -58,8 +58,14 @@
      [:li.team-name 
       [:span "Undecided"]
      [:ul.users 
-      (list-user "fabian" "true")
-      (list-user "fabian" "true")
+      (list-user "frank")
+      (list-user "jahn" "true")
+      (list-user "hubert")
+      (list-user "michael" "true")
+      (list-user "thomas" "true")
+      (list-user "natalie" "true")
+      (list-user "jonas" "true")
+      (list-user "tina" "true")
       (list-user "florian")
       (list-user "mike")]]]
     [:ul.team
@@ -67,21 +73,29 @@
      [:span {:data-lunchtime "04:20"} "Havanna"]
      [:ul.users 
       (list-user "fabian" "true")
-      (list-user "fabian" "true")
-      (list-user "fabian" "true")
-      (list-user "fabian" "true")
+      (list-user "hannes" "true")
+      (list-user "karin" "true")
+      (list-user "franco")
+      (list-user "tobias" "true")
+      (list-user "nathan" "true")
+      (list-user "gertrud")
+      (list-user "heidrun" "true")
       (list-user "daniel")
-      (list-user "moritz heidkamp")]]]
+      (list-user "moritz ")]]]
     [:ul.team
      [:li.team-name 
      [:span "REWE"]
      [:ul.users 
-      (list-user "fabian" "true")
-      (list-user "fabian" "true")
-      (list-user "fabian" "true")
-      (list-user "fabian" "true")
-      (list-user "fabian" "true")
-      (list-user "fabian" "true")
+      (list-user "jochen" "true")
+      (list-user "carla" "true")
+      (list-user "beate" "true")
+      (list-user "alexander" "true")
+      (list-user "nicole" "true")
+      (list-user "richard")
+      (list-user "tanja" "true")
+      (list-user "ludger" "true")
+      (list-user "heino" "true")
+      (list-user "timo" "true")
       (list-user "gregor")
       (list-user "gerrit")
       (list-user "guido")]]]))
