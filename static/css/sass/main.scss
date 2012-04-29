@@ -45,7 +45,24 @@ body {
  min-width: 1100px;
  &.chatroom {
   background: {
-    color: $room-bg-color;
+    color: #888;
+        image: -webkit-linear-gradient(0deg, 
+                                       rgba(41,36,41,0.1),
+                                       rgba(41,36,41,0.1) 30%,
+                                       rgba(41,36,41,0) 30%,
+                                       rgba(41,36,41,0)100%),
+        -webkit-linear-gradient(-45deg, 
+                                       rgba(41,36,41,0.1),
+                                       rgba(41,36,41,0.1) 30%,
+                                       rgba(41,36,41,0) 30%,
+                                       rgba(41,36,41,0)100%),
+        -webkit-linear-gradient(45deg, 
+                                       rgba(41,36,41,0.1),
+                                       rgba(41,36,41,0.1) 30%,
+                                       rgba(41,36,41,0) 30%,
+                                       rgba(41,36,41,0)100%);
+        repeat: repeat;
+        size: 3px 7px,10px 10px,5px 5px;
   }
  }
 }
@@ -71,7 +88,7 @@ header {
    align: center;
   }
   font: {
-   size: 40px;
+   size: 30px;
    family: CPMono;
   }
   background: {
@@ -191,12 +208,65 @@ header#chat_title {
 }
 
 #chat_window {
+  background: {
+    color: $room-bg-color;
+  }
+  box: {
+    shadow: 0 0 2px rgba(0,0,0,0.2) inset,
+            -4px 0 0 darken($room-bg-color,30%),
+            -4px -1px 0 darken($room-bg-color,30%),
+            -4px -2px 0 darken($room-bg-color,30%),
+            -4px -3px 0 darken($room-bg-color,30%),
+            -4px -4px 0 darken($room-bg-color,30%),
+            0 -4px 0 darken($room-bg-color,30%),
+            -1px -4px 0 darken($room-bg-color,30%),
+            -2px -4px 0 darken($room-bg-color,30%),
+            -3px -4px 0 darken($room-bg-color,30%),
+            -4px -4px 0 darken($room-bg-color,30%),
+            4px 0 0 darken($room-bg-color,50%),
+            4px 1px 0 darken($room-bg-color,50%),
+            4px 2px 0 darken($room-bg-color,50%),
+            4px 3px 0 darken($room-bg-color,50%),
+            4px 4px 0 darken($room-bg-color,50%),
+            0 4px 0 darken($room-bg-color,50%),
+            1px 4px 0 darken($room-bg-color,50%),
+            2px 4px 0 darken($room-bg-color,50%),
+            3px 4px 0 darken($room-bg-color,50%),
+            4px 4px 0 darken($room-bg-color,50%),
+            -4px 1px 0 darken($room-bg-color,30%),
+            -4px 2px 0 darken($room-bg-color,30%),
+            -4px 3px 0 darken($room-bg-color,30%),
+            -4px 4px 0 darken($room-bg-color,30%),
+            1px -4px 0 darken($room-bg-color,30%),
+            2px -4px 0 darken($room-bg-color,30%),
+            3px -4px 0 darken($room-bg-color,30%),
+            4px -4px 0 darken($room-bg-color,30%);
+  }
+  border: {
+    radius: 15px;
+  }
   width: 50%;
   position: absolute;
   height: 90%;
-  left: 50px;
-  top: 50px;
-  padding: 0 0 0 0;
+  left: 0;
+  top: 0;
+  padding: 25px;
+  &:after {
+    content: '';
+    height: 10px;
+    width: 40px;
+    border: {
+      radius: 30px;
+    }
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: {
+      color: #0f0;
+      image: -webkit-radial-gradient(10px 2px, 40px 10px, rgba(255,255,255,0.7), rgba(255,255,255,0));
+    }
+    box-shadow: 0 0 4px rgba(0,0,0,0.9) inset;
+  }
   *::selection {
     background: {
       color: rgba(47,167,1,1);
@@ -216,7 +286,35 @@ header#chat_title {
   #text_window {
       overflow-x:visible;
     box: {
-      shadow: 0 0 200px rgba(0,0,0,0.9) inset;
+      shadow: 0 0 200px rgba(0,0,0,0.9) inset,
+              -4px 0 0 darken($room-bg-color,30%),
+              -4px -1px 0 darken($room-bg-color,30%),
+              -4px -2px 0 darken($room-bg-color,30%),
+              -4px -3px 0 darken($room-bg-color,30%),
+              -4px -4px 0 darken($room-bg-color,30%),
+              0 -4px 0 darken($room-bg-color,30%),
+              -1px -4px 0 darken($room-bg-color,30%),
+              -2px -4px 0 darken($room-bg-color,30%),
+              -3px -4px 0 darken($room-bg-color,30%),
+              -4px -4px 0 darken($room-bg-color,30%),
+              4px 0 0 darken($room-bg-color,20%),
+              4px 1px 0 darken($room-bg-color,20%),
+              4px 2px 0 darken($room-bg-color,20%),
+              4px 3px 0 darken($room-bg-color,20%),
+              4px 4px 0 darken($room-bg-color,20%),
+              0 4px 0 darken($room-bg-color,20%),
+              1px 4px 0 darken($room-bg-color,20%),
+              2px 4px 0 darken($room-bg-color,20%),
+              3px 4px 0 darken($room-bg-color,20%),
+              4px 4px 0 darken($room-bg-color,20%),
+              -4px 1px 0 darken($room-bg-color,30%),
+              -4px 2px 0 darken($room-bg-color,30%),
+              -4px 3px 0 darken($room-bg-color,30%),
+              -4px 4px 0 darken($room-bg-color,30%),
+              1px -4px 0 darken($room-bg-color,30%),
+              2px -4px 0 darken($room-bg-color,30%),
+              3px -4px 0 darken($room-bg-color,30%),
+              4px -4px 0 darken($room-bg-color,30%);
     }
     font: {
       size: 18px;
@@ -260,10 +358,11 @@ header#chat_title {
           content: '(' attr(data-time) ')';
         }
         &.status{
+          visibility: visible;
           padding-left: 20px;
           color: rgba(157,167,1,1);
           &:last-child {
-          -webkit-animation: blink 1000ms linear infinite;
+            -webkit-animation: blink 500ms linear 3 backwards;
           }
           &:before {
             content:'';
@@ -308,7 +407,7 @@ header#chat_title {
       }
       #message {
         position:relative;
-        margin: 0 0 0 40px;
+        margin: 0 0 0 30px;
         width: 90%;
         -webkit-appearance: none;
         background: none;
@@ -431,8 +530,8 @@ ul.ui-autocomplete {
   position: absolute;
   right: 50px;
   top: 100px;
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   background: {
     image: -webkit-linear-gradient(90deg, 
                                    #b7d7be,
@@ -464,8 +563,8 @@ ul.ui-autocomplete {
           img {
             display:block;
             margin: auto;
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
           }
         }
       }
@@ -685,11 +784,8 @@ span {
   30% {
     visibility:hidden;
   }
-  50% {
+  71% {
     visibility:hidden;
-  }
-  51% {
-    visibility:visible;
   }
   100% {
     visibility:visible;
@@ -708,6 +804,8 @@ span {
   width: 100px;
   text-align: center;
   font-family: CPMono;
-  height:40px;
-  line-height: 40px;
+  height:30px;
+  line-height: 30px;
+  border: 0;
+  display:block;
 }
