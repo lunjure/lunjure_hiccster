@@ -17,11 +17,17 @@
   [:p.status {:data-time time} 
    (str user " has joined the team " place)])
 
-(defn list-user [user]
-      [:li.user 
+(defn list-user 
+  ([user avatar]
+      [:li {:class "user avatar"} 
        [:div
-        [:img {:src "/images/avatar.png"}]
+        [:img {:src "/images/emoticons/smile.png"}]
       user]])
+  ([user]
+      [:li {:class "user"} 
+       [:div
+        [:img {:src "/images/emoticons/smile.png"}]
+      user]]))
 
 (defn dummy-chat []
   (list
@@ -52,7 +58,12 @@
       [:span "Undecided"]
      [:ul.users 
       (list-user "max")
-      (list-user "fabian")
+      (list-user "fabian" "true")
+      (list-user "fabian" "true")
+      (list-user "fabian" "true")
+      (list-user "fabian" "true")
+      (list-user "fabian" "true")
+      (list-user "fabian" "true")
       (list-user "steffen")
       (list-user "thisnameisreallylong")
       (list-user "florian")

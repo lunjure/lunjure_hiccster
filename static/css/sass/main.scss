@@ -564,16 +564,50 @@ ul.ui-autocomplete {
           text-align: center;
           display: inline-block;
           > div {
+           background: {
+            image: url($base-path-images + 'avatar.png');
+            position: 50% 1px;
+            size: 40px 40px;
+            repeat:no-repeat;
+           }
             white-space:nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
             img {
               display:block;
+              visibility: hidden;
               margin: auto;
-              width: 30px;
-              height: 30px;
+              width: 40px;
+              height: 40px;
             }
-            }
+          }
+          &.avatar {
+           background-color: #fff;
+           box-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+           &:nth-child(2n + 1){
+            -webkit-transform: rotateZ(7deg);
+           }
+           &:nth-child(3n + 1){
+            -webkit-transform: rotateZ(-7deg);
+           }
+           &:nth-child(5n + 1){
+            -webkit-transform: rotateZ(-12deg);
+           }
+           &:nth-child(6n + 1){
+            -webkit-transform: rotateZ(12deg);
+           }
+           > div {
+             background: {
+               image: none; 
+             }
+           }
+           img {
+            visibility: visible;
+            display: block;
+            margin: 5px auto 0;
+            outline:1px solid #222;
+           }
+          }
         }
       }
     }
