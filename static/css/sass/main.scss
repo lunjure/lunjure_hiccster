@@ -564,7 +564,7 @@ ul.ui-autocomplete {
       span:before {
         content: '' attr(data-lunchtime);
         position: absolute;
-        right: 0;
+        right: 15px;
         top: 0;
       }
       ul.users {
