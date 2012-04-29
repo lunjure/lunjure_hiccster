@@ -54,7 +54,7 @@
       (list-user "max")
       (list-user "fabian")
       (list-user "steffen")
-      (list-user "clemens")
+      (list-user "thisnameisreallylong")
       (list-user "florian")
       (list-user "mike")]]]
     [:ul.team
@@ -62,7 +62,7 @@
      [:span "Havanna"]
      [:ul.users 
       (list-user "daniel")
-      (list-user "moritz")]]]
+      (list-user "moritz heidkamp")]]]
     [:ul.team
      [:li.team-name 
      [:span "REWE"]
