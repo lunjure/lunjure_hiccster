@@ -25,7 +25,7 @@
 
 (defn dummy-chat []
   (list
-    (message "moritz" "red" "04:20" "I'm really hungry ") 
+    (message "moritz" "red" "04:20" (list "I'm really hungry " (emoticon "lol"))) 
     (team "daniel" "04:22" "Havanna, Bonn, Blablabla-str 7")
     (team "gregor" "04:22" "REWE, Bonn, Lalalaweg 9")
     (message "gerrit" "yellow" "04:24" "REWE sounds good") 
