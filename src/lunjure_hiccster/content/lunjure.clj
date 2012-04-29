@@ -23,6 +23,7 @@
           (when dummy?
             (dummy-teams))]]
          [:section#chat_window 
+          [:button#logout {:type "button"} "Logout"]
           [:div#text_window
            [:div.output
            (when dummy?
