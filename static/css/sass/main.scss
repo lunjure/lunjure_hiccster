@@ -263,10 +263,15 @@ header#chat_title {
     bottom: 20px;
     right: 20px;
     background: {
-      color: #0f0;
+      color: #f00;
       image: -webkit-radial-gradient(10px 2px, 40px 10px, rgba(255,255,255,0.7), rgba(255,255,255,0));
     }
     box-shadow: 0 0 4px rgba(0,0,0,0.9) inset;
+  }
+  &.active:after {
+   background: {
+    color: #0f0;
+   }
   }
   *::selection {
     background: {
@@ -557,14 +562,18 @@ ul.ui-autocomplete {
           width: 60px;
           height: 62px;
           text-align: center;
-        -webkit-user-select: auto;
           display: inline-block;
-          img {
-            display:block;
-            margin: auto;
-            width: 30px;
-            height: 30px;
-          }
+          > div {
+            white-space:nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            img {
+              display:block;
+              margin: auto;
+              width: 30px;
+              height: 30px;
+            }
+            }
         }
       }
     }
