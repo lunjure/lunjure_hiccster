@@ -23,7 +23,8 @@
           (when dummy?
             (dummy-teams))]]
          [:section#chat_window 
-          [:button#logout {:type "button"} "Logout"]
+          [:form
+          [:button#logout {:type "button" :action "/logout" :method "post"} "Logout"]]
           [:div#text_window
            [:div.output
            (when dummy?
