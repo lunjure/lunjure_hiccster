@@ -554,6 +554,7 @@ ul.ui-autocomplete {
         li.user {
           margin: 2px;
           width: 60px;
+          height: 62px;
           text-align: center;
         -webkit-user-select: auto;
           display: inline-block;
@@ -612,6 +613,10 @@ ul.ui-autocomplete {
       size: 22px 22px;
     }
     content: '';
+  }
+  > div {
+   height: 100%;
+   overflow: scroll;
   }
   > div:after {
     content: '';
@@ -805,4 +810,52 @@ span {
   line-height: 30px;
   border: 0;
   display:block;
+}
+
+#logout {
+ color: #888;
+ text-shadow: 0 -1px 0 rgba(0,0,0,0.9);
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 80px;
+  -webkit-appearance: none;
+  width: 80px;
+  margin: 20px auto;
+  display: block;
+  line-height: 50px;
+  height: 50px;
+  font: {
+   size: 18px;
+   family: CPMono;
+  }
+  background: {
+   color: rgba(200,200,200,1);
+  }
+  border: {
+   radius: 4px;
+   width: 1px 1px 1px 1px;
+   color: rgba(180,180,180,1);
+   style: solid;
+  }
+  box: {
+   shadow: 0 0 19px rgba(255,255,255,0.6) inset,
+           0 5px 0 rgba(100,100,100,1);
+  }
+  &:hover {
+  color: #777;
+    background: {
+     color: rgba(180,180,180,1);
+    }  
+    border: {
+     color: rgba(160,160,160,1);
+    }
+  }
+  &:active {
+  bottom: 6px;
+    box: {
+     shadow: 0 0 19px rgba(255,255,255,0.6) inset,
+             0 1px 0 rgba(100,100,100,1);
+    }
+  } 
 }
