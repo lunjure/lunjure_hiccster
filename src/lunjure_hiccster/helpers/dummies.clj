@@ -25,12 +25,23 @@
 
 (defn dummy-chat []
   (list
-    (message "moritz" "red" "04:20" (list "I'm really hungry " (emoticon "lol"))) 
+    (message "moritz" "red" "04:20" 
+      (list 
+        "I'm really hungry " 
+        (emoticon "coffee")
+        (emoticon "burger"))) 
     (team "daniel" "04:22" "Havanna, Bonn, Blablabla-str 7")
     (team "gregor" "04:22" "REWE, Bonn, Lalalaweg 9")
-    (message "gerrit" "yellow" "04:24" "REWE sounds good") 
+    (message "gerrit" "yellow" "04:24" 
+      (list 
+        "REWE sounds good " 
+        (emoticon "blinktongue")))
     (join "gerrit" "04:24" "REWE, Bonn, Lalalaweg 9")
     (message "daniel" "orange" "04:25" "REWE? yuck") 
+    (message "max" "red" "04:25"
+      (list 
+        "I wanna go outside and enjoy the " 
+        (emoticon "sun")))
     (join "guido" "04:26" "REWE, Bonn, Lalalaweg 9")
     (join "moritz" "04:27" "Havanna, Bonn, Blablabla-str 7")))
 
