@@ -371,10 +371,7 @@ header#chat_title {
       }
     }
     &:after {
-      box: {
-        shadow: 0 -70px 70px -50px rgba(0,0,0,0.2) inset,
-                0 70px 70px -50px rgba(235,255,155,0.2) inset;
-      }
+
       pointer-events: none;
       content: '';
       width: 100%;
